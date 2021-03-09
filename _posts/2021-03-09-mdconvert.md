@@ -58,10 +58,12 @@ Visual Studio Code wird durch zwei Extensions zum Editor und Konverter:
 ![docx-settings.png]({{site.url}}{{site.baseurl}}/assets/images/docx-settings.png)  
 Das liefert schon recht ansehnliche Word Dokumente
 
-    Etwas komplizierte wird es für pdf. Pandoc erstellt zunächst ein TeX Dokument und daraus dann das pdf Dokument. Hier ist mein Eintrag in den Settings unter  
+    Etwas komplizierter wird es für pdf. Pandoc erstellt zunächst ein TeX Dokument und daraus dann das pdf Dokument. Hier ist mein Eintrag in den Settings unter  
     *Pandoc: Pdf Opt String*
 
+    ```
     --highlight-style zenburn --pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" -V block-headings -V fontsize:12pt -V mainfont:"Times New Roman" -V monofont:"Consolas"
+    ```
 
     Zur Bedeutung der Optionen verweise ich wieder auf die Dokumetation von pandoc.
 
