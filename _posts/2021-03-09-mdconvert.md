@@ -62,7 +62,7 @@ Das liefert schon recht ansehnliche Word Dokumente
     *Pandoc: Pdf Opt String*
 
     ```
-    --highlight-style zenburn --pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" -V block-headings -V fontsize:12pt -V mainfont:"Times New Roman" -V monofont:"Consolas"
+    --highlight-style zenburn --pdf-engine=lualatex -V colorlinks -V urlcolor=NavyBlue -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" -V block-headings -V fontsize:12pt -V mainfont:"Times New Roman" -V monofont:"Consolas"
     ```
 
     Zur Bedeutung der Optionen verweise ich wieder auf die Dokumetation von pandoc.
@@ -86,3 +86,5 @@ Das liefert schon recht ansehnliche Word Dokumente
       ```
 
       Diese wird im ohnenhin schon sehr langen *Pandoc: Pdf Opt String* mit *-H d:\\pandoc\\head.tex* angegeben.
+
+    - im *Pandoc: Pdf Opt string* ist **--pdf-engine=lualatex** angegeben. Latex kann auch mit anderen engines (z.B. pdflatex oder xelatex) das pdf Dokument erstellen. Aber hier habe ich bei xelatex etwas merkwürdiges festgestellt: Die Bindestriche in powershell cmdlest werden so unbrauchbar, dass man einzelne Befehle oder Skripte nicht per copy und paste übernehmen kann. Powershell erkennt dann den Befehl nicht!
