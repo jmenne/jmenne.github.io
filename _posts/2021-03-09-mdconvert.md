@@ -37,9 +37,9 @@ Visual Studio Code wird durch zwei Extensions zum Editor und Konverter:
 
     - Über Pandoc schreibt sein Schöpfer [John MacFarlane](https://johnmacfarlane.net):  
     *"If you need to convert files from one markup format into another, pandoc is your swiss-army knife."*  
-    Unter anderem wandelt pandoc aus markdown auch in docx und pdf, benötigt für letzteres aber Unterstützung von \LaTeX\.
+    Unter anderem wandelt pandoc aus markdown auch in docx und pdf, benötigt für letzteres aber Unterstützung von LaTeX.
 
-    - MiKtex - ausgesprochen *mick-tech* - ist eine aktuelle \TeX\/\LaTeX\ Implementierung, die sich auch für Windows 10 Systeme eignet.  
+    - MiKtex - ausgesprochen *mick-tech* - ist eine aktuelle TeX/LaTeX Implementierung, die sich auch für Windows 10 Systeme eignet.  
 
 2. Nun kommen die Extensions für Visual Studio Code an die Reihe.
 
@@ -59,7 +59,7 @@ Visual Studio Code wird durch zwei Extensions zum Editor und Konverter:
 ![docx-settings.png]({{site.url}}{{site.baseurl}}/assets/images/docx-settings.png)  
 Das liefert schon recht ansehnliche Word Dokumente
 
-    Etwas komplizierter wird es für pdf. Pandoc erstellt zunächst ein \LaTeX\ Dokument und daraus dann das pdf Dokument. Hier ist mein Eintrag in den Settings unter  
+    Etwas komplizierter wird es für pdf. Pandoc erstellt zunächst ein LaTeX Dokument und daraus dann das pdf Dokument. Hier ist mein Eintrag in den Settings unter  
     *Pandoc: Pdf Opt String*
 
     ```
@@ -88,4 +88,4 @@ Das liefert schon recht ansehnliche Word Dokumente
 
       Diese wird im ohnenhin schon sehr langen *Pandoc: Pdf Opt String* mit *-H d:\\pandoc\\head.tex* angegeben.
 
-    - im *Pandoc: Pdf Opt string* ist **--pdf-engine=lualatex** angegeben. \LaTeX\ kann auch mit anderen engines (z.B. pdflatex oder xelatex) das pdf Dokument erstellen. Aber hier habe ich bei xelatex etwas merkwürdiges festgestellt: Die Bindestriche in powershell cmdlets werden so unbrauchbar, dass man einzelne Befehle oder Skripte nicht per copy und paste übernehmen kann. Powershell erkennt dann den Befehl nicht!
+    - im *Pandoc: Pdf Opt string* ist **--pdf-engine=lualatex** angegeben. LaTeX kann auch mit anderen engines (z.B. pdflatex oder xelatex) das pdf Dokument erstellen. Aber hier habe ich bei xelatex etwas merkwürdiges festgestellt: Die Bindestriche in powershell cmdlets werden so unbrauchbar, dass man einzelne Befehle oder Skripte nicht per copy und paste übernehmen kann. Powershell erkennt dann den Befehl nicht!
