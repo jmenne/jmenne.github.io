@@ -8,6 +8,7 @@ tags:
   - VSCode
   - Visual Studio Code
   - pandoc
+  - LaTeX
 ---
 
 # Aus Markdown mach Word und PDF
@@ -15,7 +16,7 @@ tags:
 Microsoft verwendet in seinen Github Repositories für die Lab Anleitungen das Markdown Format. Leider wird dabei wenig bis gar keine Rücksicht auf die korrekte Syntax genommen. Man braucht also einen guten Editor mit Syntaxprüfung für Markdown Dateien. Außerdem soll man den Teilnehmern der Kurse die Lab Anleitungen zur Verfügung stellen, damit sie nicht selbst auf die Github Seiten gehen müssen. Das könnte für zusätzliche Verwirrung bei den Teilnehmern sorgen - sagt Microsoft.  
 Also braucht man noch eine Möglichkeit aus Markdown Word und PDF Dokumente zu erstellen.
 
-Im Folgenden zeige ich, wie man mit Visual Studio Code, ein paar Extensions, pandoc und MiKTex die Syntaxprüfung und Konvertierung durchführen kann.
+Im Folgenden zeige ich, wie man mit Visual Studio Code, ein paar Extensions, pandoc und MiKTeX die Syntaxprüfung und Konvertierung durchführen kann.
 
 ## Voraussetzungen
 
@@ -36,9 +37,9 @@ Visual Studio Code wird durch zwei Extensions zum Editor und Konverter:
 
     - Über Pandoc schreibt sein Schöpfer [John MacFarlane](https://johnmacfarlane.net):  
     *"If you need to convert files from one markup format into another, pandoc is your swiss-army knife."*  
-    Unter anderem wandelt pandoc aus markdown auch in docx und pdf, benötigt für letzteres aber Unterstützung von LaTex.
+    Unter anderem wandelt pandoc aus markdown auch in docx und pdf, benötigt für letzteres aber Unterstützung von \LaTeX\.
 
-    - MiKtex - ausgesprochen *mick-tech* - ist eine aktuelle Tex/LaTex Implementierung, die sich auch für Windows 10 Systeme eignet.  
+    - MiKtex - ausgesprochen *mick-tech* - ist eine aktuelle \TeX\/\LaTeX\ Implementierung, die sich auch für Windows 10 Systeme eignet.  
 
 2. Nun kommen die Extensions für Visual Studio Code an die Reihe.
 
@@ -58,7 +59,7 @@ Visual Studio Code wird durch zwei Extensions zum Editor und Konverter:
 ![docx-settings.png]({{site.url}}{{site.baseurl}}/assets/images/docx-settings.png)  
 Das liefert schon recht ansehnliche Word Dokumente
 
-    Etwas komplizierter wird es für pdf. Pandoc erstellt zunächst ein TeX Dokument und daraus dann das pdf Dokument. Hier ist mein Eintrag in den Settings unter  
+    Etwas komplizierter wird es für pdf. Pandoc erstellt zunächst ein \LaTeX\ Dokument und daraus dann das pdf Dokument. Hier ist mein Eintrag in den Settings unter  
     *Pandoc: Pdf Opt String*
 
     ```
@@ -87,4 +88,4 @@ Das liefert schon recht ansehnliche Word Dokumente
 
       Diese wird im ohnenhin schon sehr langen *Pandoc: Pdf Opt String* mit *-H d:\\pandoc\\head.tex* angegeben.
 
-    - im *Pandoc: Pdf Opt string* ist **--pdf-engine=lualatex** angegeben. Latex kann auch mit anderen engines (z.B. pdflatex oder xelatex) das pdf Dokument erstellen. Aber hier habe ich bei xelatex etwas merkwürdiges festgestellt: Die Bindestriche in powershell cmdlest werden so unbrauchbar, dass man einzelne Befehle oder Skripte nicht per copy und paste übernehmen kann. Powershell erkennt dann den Befehl nicht!
+    - im *Pandoc: Pdf Opt string* ist **--pdf-engine=lualatex** angegeben. \LaTeX\ kann auch mit anderen engines (z.B. pdflatex oder xelatex) das pdf Dokument erstellen. Aber hier habe ich bei xelatex etwas merkwürdiges festgestellt: Die Bindestriche in powershell cmdlets werden so unbrauchbar, dass man einzelne Befehle oder Skripte nicht per copy und paste übernehmen kann. Powershell erkennt dann den Befehl nicht!
