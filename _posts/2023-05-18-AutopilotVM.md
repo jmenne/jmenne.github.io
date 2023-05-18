@@ -49,7 +49,11 @@ Hierdurch wird zunächst das Modul *WindowsAutopilotIntune* installiert, dann er
 
 ![Registrirung des Geräts]({{site.url}}{{site.baseurl}}/assets/images/Autopilot/Bild4.png)
 
-Im Intune admin Center erscheint das Gerät mit dem *Profile Status* *Not Assigned*. Nach einer kurzen Wartezeit ist das Gerät dann Mitglied der dynamischen Gerätegruppe und das Bereitstellungsprofil ist zugewiesen.
+Im Intune admin Center erscheint das Gerät mit dem *Profile Status* *Not Assigned*.
+
+![Intune Admin Center]({{site.url}}{{site.baseurl}}/assets/images/Autopilot/Bild3.png)
+
+ Nach einer kurzen Wartezeit ist das Gerät dann Mitglied der dynamischen Gerätegruppe und das Bereitstellungsprofil ist zugewiesen.
 Der *Profile Status* zeigt nun *Assigned*.
 
 ## 4. VM ausschalten und neu starten
